@@ -2,7 +2,7 @@
   <img class="card-img-top" src="https://images.freeimages.com/images/large-previews/f13/factory-1446641.jpg" alt="Card image cap"
   />
   <div class="card-body">
-    <h5 class="card-title total-donated">Total Donated: $ {{ amountDonated }}</h5>
+    <h5 class="card-title total-donated">Total Donated: $ <span class="amount-donated"> {{ amountDonated }} </span></h5>
     <p class="card-text">Make a donation for this project. You can be sure that your contribution will be well applied.</p>
     <form novalidate [formGroup]="formMakeADonation">
       <div class="form-row">
