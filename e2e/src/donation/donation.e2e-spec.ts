@@ -39,4 +39,30 @@ describe('angular-e2e-sample donation testing', () => {
     expect(page.getInputForAmount().isDisplayed()).toBeTruthy();
     expect(page.getButtonForDonate().isDisplayed()).toBeTruthy();
   });
+
+  it('should change the total donated when a new donation is made', () => {
+    page.navigateTo();
+
+    page.makeADonation(10);
+
+    expect(page.getTotalAmountDonated()).toEqual('10');
+  });
+
+  it('should display the label for the input field when it is filled', () => {
+    page.navigateTo();
+
+    const inputField = page.getInputForAmount();
+    inputField.sendKeys(10);
+
+    expect(page.getLabelForInput().isDisplayed()).toBeTruthy();
+  });
+
+  it('should display the label for the input field exactly equals to it placeholder when it is filled', () => {
+    page.navigateTo();
+
+    const inputField = page.getInputForAmount();
+    inputField.sendKeys(10);
+
+    expect(page.getLabelDescriptionForInput()).toEqual('*Amount');
+  });
 });

@@ -7,11 +7,18 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./donation.component.css']
 })
 export class DonationComponent {
-  amountDonated: Number = 0;
+  amountDonated: number;
 
   public formMakeADonation: FormGroup = new FormGroup({
     'amount': new FormControl('', [Validators.required, Validators.min(0)]),
   });
 
-  constructor() { }
+  constructor() {
+    this.amountDonated = 0;
+  }
+
+  donate() {
+    this.amountDonated += this.formMakeADonation.controls['amount'].value;
+    this.formMakeADonation.controls['amount'].reset();
+  }
 }

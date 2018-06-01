@@ -32,4 +32,17 @@ export class DonationTestingPage {
   getButtonForDonate() {
     return element(by.tagName('button'));
   }
+
+  makeADonation(amount: number) {
+    element(by.tagName('input')).sendKeys(amount);
+    element(by.tagName('button')).click();
+  }
+
+  getLabelDescriptionForInput() {
+    return element(by.tagName('label')).getText();
+  }
+
+  getLabelForInput() {
+    return element(by.tagName('label'));
+  }
 }
