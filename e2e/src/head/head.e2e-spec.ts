@@ -12,5 +12,6 @@ describe('angular-e2e-sample head testing', () => {
     page.navitateTo();
 
     expect(page.getBannerTitleText()).toEqual('Donation');
+    expect(page.getBannerText()).toEqual('Leave us a donation. It will be very helpful.');
   });
 });

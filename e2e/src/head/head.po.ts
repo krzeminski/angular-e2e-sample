@@ -8,4 +8,8 @@ export class HeadTestingPage {
   getBannerTitleText() {
     return element(by.css('.main-container h1')).getText();
   }
+
+  getBannerText() {
+    return element(by.css('.main-container p')).getText();
+  }
 }
