@@ -1,6 +1,6 @@
 # angular-e2e-sample
 
-A very simple sample about how to make e2e tests for an Angular 2+ application.
+A short sample about how to make e2e tests for an Angular 2+ application.
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ What things do you need to get this source code and run the sample
 
 ###  Installing
 
-Once you have the code you will have to install the project dependencies to be able to run it. To do that execute the command bellow via terminal inside the project folder:
+Once you have the code you will must install the project dependencies to be able to run it. To do that execute the command bellow via terminal inside the project folder:
 
 `npm install`
 
@@ -37,3 +37,8 @@ To execute all e2e tests, the main purpose of this project, just run the command
 ## License
 
 This project is used for learn purpose and is under MIT License (I know, just protocol) - see the [LICENSE.md](https://github.com/guilhermeps/angular-e2e-sample/blob/master/LICENSE)
+
+## Contributions
+
+All contributions are welcome, so, if you want to contribute doing some code review or making this sample greater, let me know. As I said,
+you will be very welcome. After the job done, we can take some :beers: 
