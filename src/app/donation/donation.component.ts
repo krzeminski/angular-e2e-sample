@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,14 +6,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './donation.component.html',
   styleUrls: ['./donation.component.css']
 })
-export class DonationComponent {
+export class DonationComponent implements OnInit{
   amountDonated: number;
 
   public formMakeADonation: FormGroup = new FormGroup({
     'amount': new FormControl('', [Validators.required, Validators.min(0)]),
   });
 
-  constructor() {
+  constructor() { }
+
+  ngOnInit() {
     this.amountDonated = 0;
   }
 
